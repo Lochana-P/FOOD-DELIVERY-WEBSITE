@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Food Delivery App</title>
+<style>
+    .a{
+color: black;
+text-align: center;
+}
+ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+background-color: #333;
+}
+li {
+float: left;
+}
+li a {
+display: block;
+color: white;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+}
+li a:hover {
+background-color: #111;
+}
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 30%;
+}
+pre{
+font-size: large;
+}
+</style>
+<script>
+function change(){
+alert("Payment successful!")
+}
+</script>
+</head>
+<body>
+<div>
+<ul>
+<li><a href="/" >Home</a></li>
+<li><a href="search.html">Search</a></li>
+<li><a href="cart.html" >Cart</a></li>
+<li><a href="profile.html">Profile</a></li>
+</ul>
+</div>
+<h1>Food delivery App</h1>
+<h2>Place your order now!</h2>
+<h3>Items in cart</h3>
+<ol>
+<% items.forEach(function(item) { %>
+<li> <%= item.Dish %> - <%= item.Quantity %></li><br>
+<% }); %>
+</ol>
+<br><button type="submit" onclick="change()">Proceed to Payment</button>
+</body>
+</html>

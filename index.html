@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Display MongoDB Data</title>
+<link rel="stylesheet" type="text/css" href="/public/style.css">
+<style>.a{
+color: black;
+text-align: center;
+}
+ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+background-color: #333;
+}
+li {
+float: left;
+}
+li a {
+display: block;
+color: white;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+}
+li a:hover {
+background-color: #111;
+}
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 30%;
+}
+pre{
+font-size: large;
+}</style>
+</head>
+<body>
+<div>
+<ul>
+<li><a href="/" >Home</a></li>
+<li><a href="search.html">Search</a></li>
+<li><a href="cart.html" >Cart</a></li>
+<li><a href="profile.html">Profile</a></li>
+</ul>
+</div>
+<h1>Food delivery App</h1>
+<h2>Buy The Top 3 Food-Item our App</h2>
+<ol>
+<% items.forEach(function(item) { %>
+<li> <%= item.dish_name %></li><br><br>
+<% }); %>
+</ol>
+<h2>Give your order here</h2>
+<form action="/" method="POST">
+<label>Enter the dish you want to order</label><br>
+<input type="text" name="dish"><br><br>
+<label>Enter the quantity</label><br>
+<input type="number" name="quantity"><br><br>
+<input type="submit" value="Place order"><br><br>
+</form>
+</body>
+</html>
